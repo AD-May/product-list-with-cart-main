@@ -29,9 +29,16 @@ Users should be able to:
 ### Screenshots
 
 **Mobile UI**
+
 ![Mobile Screenshot](./mobile-screenshot.jpg)
+
+
+
 **Desktop UI**
+
 ![Desktop](./desktop-screenshot.jpg)
+
+
 
 ### Links
 
