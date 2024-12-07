@@ -65,7 +65,7 @@ I learned a great deal about Bootstrap classing and using it to build responsive
 
 ### Continued development
 
-- [ ] Abstract Javascript further for better conciseness
+- [ ] Abstract functions further for better conciseness and control flow
 - [ ] Implement a branch using React.js
 - [ ] Build out a tablet version of the UI
 
