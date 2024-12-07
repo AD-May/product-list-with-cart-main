@@ -1,0 +1,284 @@
+@import 'mixins';
+
+$body-font-style: 'Red Hat Text', sans-serif;
+$product-name-font-size: 16px;
+$red: hsl(14, 86%, 42%);
+$red-border: hsl(10, 86%, 42%);
+$green: hsl(159, 69%, 38%);
+$rose-50: hsl(20, 50%, 98%);
+$rose-100: hsl(13, 31%, 94%);
+$rose-300: hsl(14, 25%, 72%);
+$rose-400: hsl(7, 20%, 60%);
+$rose-500: hsl(12, 20%, 44%);
+$rose-900: hsl(14, 65%, 9%);
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @extend .lightBackground;
+    font-family: $body-font-style;
+    margin: 10px;
+}
+
+.lightBackground {
+    background-color: $rose-50;
+}
+
+header {
+    color: $rose-900;
+    padding-bottom: 10px;
+}
+
+.heading {
+    font-weight: 700;
+}
+    
+#landing-title {
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 2.2rem;
+    padding: 5px;
+}
+
+button {
+    border-radius: 15px;
+}
+
+.inCart {
+    border: 2px solid $red-border;
+}
+
+#items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.boldText {
+    font-weight: 600;
+    font-size: 16px;
+    color: $rose-900;
+}
+
+.lightText {
+    color: $rose-400;
+    font-weight: 400;
+}
+
+.redText {
+    color: $red;
+    font-weight: 600;
+}
+
+.moderateText {
+    color: $rose-500;
+    font-weight: 400;
+}
+    
+.itemCard {
+    margin: 0 5px 30px;
+    position: relative;
+    p {
+        padding: 0;
+        margin: 0;
+    }
+        
+    p:first-of-type {
+        font-size: 14px;
+    }
+}
+        
+.cardImage {
+    padding: 0;
+    margin-bottom: 0px;
+}
+        
+.controls {
+    @include dimensions(40px, 45%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    border: 1px solid $rose-300;
+    background: white;
+}
+        
+.controls:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.redBtn {
+    background-color: $red;
+    color: $rose-50;
+    border: 1px solid $red-border;
+    justify-content: space-between;
+    :hover {
+        border: 1px solid $red-border;
+    }
+}
+
+.controlBtns {
+    background: $red;
+    border-radius: 0;
+    @include dimensions(100%, 25%);
+    border: none;
+    img {
+        pointer-events: none;
+        border: 1px solid white;
+        @include dimensions(17px, 17px);
+        padding: 2px;
+        border-radius: 50%;
+    }
+}
+
+#checkout {
+    background-color: white;
+    padding: 25px 20px;
+    p {
+        font-size: 14px;
+    }
+}
+    
+#cart-header {
+    color: $red;
+}
+
+.itemBorder {
+    border-bottom: 1px solid $rose-100;
+}
+
+.cartItemContainer {
+    @extend .itemBorder;
+    position: relative;
+    width: 100%;
+    padding: 10px 0 0;
+    p {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    > p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4) {
+        display: inline-block;
+    }
+    button {
+        display: block;
+        position: relative;
+        left: 95%;
+        bottom: 40px;
+        background: white;
+        border: none;
+        cursor: pointer;
+        img {
+            border: 1px solid $rose-400;
+            @include dimensions(20px, 20px);
+            padding: 1px;
+            border-radius: 50%;
+        }
+    :hover {
+        background-color: $red;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    }
+}
+
+.orderTotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin: 30px 0;
+}
+    
+#environment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: $rose-50;
+    height: 3rem;
+    p {
+        margin-bottom: 0;
+    }
+}
+    
+.submitBtn {
+    @extend .redBtn;
+    position: relative;
+    @include dimensions(50px, 90%);
+    border-radius: 25px;
+    margin: 20px auto 0;
+    left: 5%;
+}
+
+#confirmation {
+    padding: 1.8rem 1.6rem;
+    border: none;
+    margin: auto;
+    h1 {
+        margin-top: 20px;
+    }
+}
+
+#modal-items {
+    @extend .lightBackground;
+    padding: 20px;
+    margin-bottom: 50px;
+    div {
+        @extend .itemBorder;
+        padding: 10px 0;
+    }
+    img {
+        margin-bottom: 1.4rem;
+        @include dimensions(3.6rem, 3.6rem);
+    }
+    p {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    margin-top: 10px;
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    #items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .controls {
+        width: 60%;
+    }
+    #checkout {
+        margin: 0 15px;
+        height: fit-content;
+    }
+    dialog {
+        @include dimensions(50%, 40%);
+        backdrop-filter: opacity(60%);
+    }
+}

@@ -1,0 +1,273 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  margin: 10px;
+}
+
+.lightBackground, #modal-items, body {
+  background-color: hsl(20, 50%, 98%);
+}
+
+header {
+  color: hsl(14, 65%, 9%);
+  padding-bottom: 10px;
+}
+
+.heading {
+  font-weight: 700;
+}
+
+#landing-title {
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 2.2rem;
+  padding: 5px;
+}
+
+button {
+  border-radius: 15px;
+}
+
+.inCart {
+  border: 2px solid hsl(10, 86%, 42%);
+}
+
+#items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.boldText {
+  font-weight: 600;
+  font-size: 16px;
+  color: hsl(14, 65%, 9%);
+}
+
+.lightText {
+  color: hsl(7, 20%, 60%);
+  font-weight: 400;
+}
+
+.redText {
+  color: hsl(14, 86%, 42%);
+  font-weight: 600;
+}
+
+.moderateText {
+  color: hsl(12, 20%, 44%);
+  font-weight: 400;
+}
+
+.itemCard {
+  margin: 0 5px 30px;
+  position: relative;
+}
+.itemCard p {
+  padding: 0;
+  margin: 0;
+}
+.itemCard p:first-of-type {
+  font-size: 14px;
+}
+
+.cardImage {
+  padding: 0;
+  margin-bottom: 0px;
+}
+
+.controls {
+  height: 40px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: auto;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  border: 1px solid hsl(14, 25%, 72%);
+  background: white;
+}
+
+.controls:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.redBtn, .submitBtn {
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  border: 1px solid hsl(10, 86%, 42%);
+  justify-content: space-between;
+}
+.redBtn :hover, .submitBtn :hover {
+  border: 1px solid hsl(10, 86%, 42%);
+}
+
+.controlBtns {
+  background: hsl(14, 86%, 42%);
+  border-radius: 0;
+  height: 100%;
+  width: 25%;
+  border: none;
+}
+.controlBtns img {
+  pointer-events: none;
+  border: 1px solid white;
+  height: 17px;
+  width: 17px;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+#checkout {
+  background-color: white;
+  padding: 25px 20px;
+}
+#checkout p {
+  font-size: 14px;
+}
+
+#cart-header {
+  color: hsl(14, 86%, 42%);
+}
+
+.itemBorder, #modal-items div, .cartItemContainer {
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+}
+
+.cartItemContainer {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 0;
+}
+.cartItemContainer p {
+  font-size: 14px;
+  margin: 0 5px;
+}
+.cartItemContainer > p:nth-of-type(2), .cartItemContainer p:nth-of-type(3), .cartItemContainer p:nth-of-type(4) {
+  display: inline-block;
+}
+.cartItemContainer button {
+  display: block;
+  position: relative;
+  left: 95%;
+  bottom: 40px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+.cartItemContainer button img {
+  border: 1px solid hsl(7, 20%, 60%);
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+  border-radius: 50%;
+}
+.cartItemContainer button :hover {
+  background-color: hsl(14, 86%, 42%);
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.orderTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  margin: 30px 0;
+}
+
+#environment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: hsl(20, 50%, 98%);
+  height: 3rem;
+}
+#environment p {
+  margin-bottom: 0;
+}
+
+.submitBtn {
+  position: relative;
+  height: 50px;
+  width: 90%;
+  border-radius: 25px;
+  margin: 20px auto 0;
+  left: 5%;
+}
+
+#confirmation {
+  padding: 1.8rem 1.6rem;
+  border: none;
+  margin: auto;
+}
+#confirmation h1 {
+  margin-top: 20px;
+}
+
+#modal-items {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+#modal-items div {
+  padding: 10px 0;
+}
+#modal-items img {
+  margin-bottom: 1.4rem;
+  height: 3.6rem;
+  width: 3.6rem;
+}
+#modal-items p {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  #items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .controls {
+    width: 60%;
+  }
+  #checkout {
+    margin: 0 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  dialog {
+    height: 50%;
+    width: 40%;
+    -webkit-backdrop-filter: opacity(60%);
+            backdrop-filter: opacity(60%);
+  }
+}/*# sourceMappingURL=styles.css.map */
